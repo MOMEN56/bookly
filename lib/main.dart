@@ -12,6 +12,10 @@ class Bookly extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: KprimaryColor), debugShowCheckedModeBanner: false, home: SplashView());
+    return GetMaterialApp(
+      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: KprimaryColor),
+      debugShowCheckedModeBanner: false,
+      home: SplashView(),
+    );
   }
 }
