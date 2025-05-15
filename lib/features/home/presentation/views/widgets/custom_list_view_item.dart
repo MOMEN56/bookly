@@ -3,13 +3,25 @@ import 'package:bookly_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
 class FuturedListViewItem extends StatelessWidget {
-  const FuturedListViewItem({Key? key}) : super(key: key);
+  const FuturedListViewItem({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: AppSizes.screenHeight(context) * .3,
-      child: AspectRatio(aspectRatio: 2.7 / 4, child: Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(16), color: Colors.red, image: const DecorationImage(fit: BoxFit.fill, image: AssetImage(AssetsData.testImage))))),
+      child: AspectRatio(
+        aspectRatio: 2.7 / 4,
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            color: Colors.red,
+            image: const DecorationImage(
+              fit: BoxFit.fill,
+              image: AssetImage(AssetsData.testImage),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
