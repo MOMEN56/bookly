@@ -9,6 +9,7 @@ class FuturedListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: AppSizes.screenHeight(context) * .3,
+      width: AppSizes.screenWidth(context) * .307,
       child: AspectRatio(
         aspectRatio: 2.7 / 4,
         child: Container(
