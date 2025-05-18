@@ -10,7 +10,7 @@ class BookRating extends StatelessWidget {
       children: [
         Icon(Icons.star, color: Colors.yellow, size: 20),
         SizedBox(width: 2.5),
-        Text('4.8', style: Styles.textStyle16),
+        Text('4.8', style: Styles.textStyle18),
         SizedBox(width: 2),
         Text('(245)', style: Styles.textStyle14.copyWith(color: Colors.grey)),
         SizedBox(width: 8),

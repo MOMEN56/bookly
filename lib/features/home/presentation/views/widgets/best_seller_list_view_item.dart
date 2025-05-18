@@ -12,11 +12,11 @@ class BestSellerListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenWidth = AppSizes.screenWidth(context);
     return SizedBox(
-      height: 125,
+      height: 137,
       child: Row(
         children: [
           AspectRatio(
-            aspectRatio: 2.6 / 4,
+            aspectRatio: 2.8 / 4,
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
@@ -39,7 +39,7 @@ class BestSellerListViewItem extends StatelessWidget {
                     'Harry Potter and the Goblet of Fire',
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
-                    style: Styles.textStyle20.copyWith(
+                    style: Styles.textStyle18.copyWith(
                       fontFamily: kGtSectraFine,
                     ),
                   ),
@@ -52,7 +52,7 @@ class BestSellerListViewItem extends StatelessWidget {
                   children: [
                     Text(
                       "19.99€",
-                      style: Styles.textStyle20.copyWith(
+                      style: Styles.textStyle18.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
                     ),
