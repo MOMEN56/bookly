@@ -13,6 +13,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:go_router/go_router.dart';
 
 void main() {
+  setupServiceLocator();
   runApp(const Bookly());
 }
 
@@ -24,7 +25,10 @@ class Bookly extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => FeaturedBooksCubit(getIt.get<HomeRepoImpl>()),
+          create:
+              (context) =>
+                  FeaturedBooksCubit(getIt.get<HomeRepoImpl>())
+                    ..fetchFeaturedBooks(),
         ),
         BlocProvider(
           create: (context) => NewestBooksCubit(getIt.get<HomeRepoImpl>()),

@@ -29,7 +29,10 @@ class BookDetailsViewBody extends StatelessWidget {
                 const CustomBookDetailsAppBar(),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: width * .2),
-                  child: const CustomBookImage(),
+                  child: const CustomBookImage(
+                    imageUrl:
+                        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2FIAEMS%2F&psig=AOvVaw02tb9od5XFdil1zFj6IGiS&ust=1748251286188000&source=images&cd=vfe&opi=89978449&ved=2ahUKEwixoLPYpb6NAxWy2QIHHZGbI5wQjRx6BAgAEBk',
+                  ),
                 ),
                 const SizedBox(height: 10),
                 Text(
