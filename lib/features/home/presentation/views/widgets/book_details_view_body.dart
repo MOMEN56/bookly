@@ -1,6 +1,7 @@
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:bookly_app/core/widgets/custom_botton.dart';
+import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/book_rating.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/books_action.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/custom_book_image.dart';
@@ -13,8 +14,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'custom_book_details_app_bar.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
-  const BookDetailsViewBody({super.key});
-
+  const BookDetailsViewBody({super.key, required this.bookModel});
+  final BookModel bookModel;
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
@@ -29,23 +30,24 @@ class BookDetailsViewBody extends StatelessWidget {
                 const CustomBookDetailsAppBar(),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: width * .2),
-                  child: const CustomBookImage(
-                    imageUrl:
-                        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2FIAEMS%2F&psig=AOvVaw02tb9od5XFdil1zFj6IGiS&ust=1748251286188000&source=images&cd=vfe&opi=89978449&ved=2ahUKEwixoLPYpb6NAxWy2QIHHZGbI5wQjRx6BAgAEBk',
+                  child: CustomBookImage(
+                    imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ?? "",
                   ),
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  'The Jungle Book',
+                  bookModel.volumeInfo.title ?? "",
                   style: Styles.textStyle30.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
+                  textAlign: TextAlign.center,
                 ),
+
                 const SizedBox(height: 5),
                 Opacity(
                   opacity: .7,
                   child: Text(
-                    'Rudyard Kipling',
+                    bookModel.volumeInfo.authors?.first ?? "",
                     style: Styles.textStyle18.copyWith(
                       fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.w500,
